@@ -6,7 +6,7 @@ const home = async (req, res) => {
     try{
         res
         .status(200)
-        .send('Welcome to world best mern series by xDcoder using router');
+        .send('Welcome to world best Mern stack series by xDcoder.');
 
     } catch(error){
         console.log(error);
