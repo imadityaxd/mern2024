@@ -42,6 +42,12 @@ userSchema.pre("save", async function(next){
     }
 });
 
+//compare the password
+userSchema.methods.comparePassword = async function(password){
+    return bcrypt.compare(password, this.password);
+};
+
+
 //json web token -- > typically not stored in database, store in cookies or local storage
 userSchema.methods.generateToken = async function () {
     try {
