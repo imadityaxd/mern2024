@@ -34,6 +34,7 @@ p,li,label,input, textarea {
   line-height: 1.56;
   letter-spacing: 0.1 rem;
   word-spacing: 0.06rem;
+  padding:0.4rem;
 }
 
 a{
