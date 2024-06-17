@@ -2,6 +2,15 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+}
+
+:root{
+  --bg-color: #f4f3ff;
+  --btn-color: #646cff;
+  --dark-color:#242424;
+  --helper-color: #99b9ff;
 }
 
 html{
