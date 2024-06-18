@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const Register = () =>{
     const [user, setUser] = useState({
-        username:"xdcoder",
+        username:"",
         email:"",
         phone:"",
         password:"",
@@ -22,6 +22,12 @@ const handleInput =(e) => {
         });
 };
 
+//submit the form
+const handleSubmit = (e) =>{
+    e.preventDefault();
+    alert(user);
+}
+
     return (
     <>
         <section>
@@ -37,7 +43,7 @@ const handleInput =(e) => {
                             <div className= "registration-form">
                                 <h1 className="main-heading mb-3">Registration form</h1>
                                 <br/>
-                                <form>
+                                <form onSubmit= {handleSubmit}>
                                     <div>
                                         <label htmlFor="username">username</label>
                                         <input 
