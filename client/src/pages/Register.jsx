@@ -10,7 +10,7 @@ export const Register = () =>{
 
     });
 
-    //handling input
+//handling the form input
 const handleInput =(e) => {
         console.log(e);
         let name = e.target.name;
@@ -22,10 +22,9 @@ const handleInput =(e) => {
         });
 };
 
-//submit the form
+//handling the form submit 
 const handleSubmit = (e) =>{
     e.preventDefault();
-    alert(user);
 }
 
     return (
