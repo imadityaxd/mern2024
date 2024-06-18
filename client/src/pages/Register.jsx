@@ -1,5 +1,29 @@
+import { useState } from "react";
+
+
 export const Register = () =>{
-    return <>
+    const [user, setUser] = useState({
+        username:"xdcoder",
+        email:"",
+        phone:"",
+        password:"",
+
+    });
+
+    //handling input
+const handleInput =(e) => {
+        console.log(e);
+        let name = e.target.name;
+        let value = e.target.value;
+
+        setUser({
+            ...user,
+            [name]: value,
+        });
+};
+
+    return (
+    <>
         <section>
             <main>
                 <div className = "section-registration">
@@ -15,9 +39,52 @@ export const Register = () =>{
                                 <br/>
                                 <form>
                                     <div>
-                                        <label htmlFor="email">email</label>
-                                        <input type="text" name="email" placeholder="email" id="email" required autoComplete="off"/>
+                                        <label htmlFor="username">username</label>
+                                        <input 
+                                        type="text" 
+                                        name="username"
+                                        placeholder="enter your username" 
+                                        id="username" 
+                                        required autoComplete="off"
+                                        value={user.username}
+                                        onChange={handleInput}/>
+                                        
                                     </div>
+                                    <div>
+                                        <label htmlFor="email">email</label>
+                                        <input 
+                                        type="email" 
+                                        name="email"
+                                        placeholder="enter your email" 
+                                        id="email" 
+                                        required autoComplete="off"
+                                        value={user.email}
+                                        onChange={handleInput}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="phone">phone</label>
+                                        <input 
+                                        type="number" 
+                                        name="phone"
+                                        placeholder="phone" 
+                                        id="phone" 
+                                        required autoComplete="off"
+                                        value={user.phone}
+                                        onChange={handleInput}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="password">password</label>
+                                        <input 
+                                        type="password" 
+                                        name="password"
+                                        placeholder="password" 
+                                        id="password" 
+                                        required autoComplete="off"
+                                        value={user.password}
+                                        onChange={handleInput}/>
+                                    </div>
+                                    <br/>
+                                    <button type="submit" className="btn btn-submit">Register Now</button>
                                 </form>
                             </div>
                         </div>
@@ -26,5 +93,5 @@ export const Register = () =>{
 
             </main>
         </section>
-    </>;
+    </>);
 }
