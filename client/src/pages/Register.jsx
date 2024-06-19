@@ -35,7 +35,6 @@ const handleSubmit = (e) =>{
                     <div className="container grid grid-two-cols">
                         <div className="registration-image">
                             <img src ="/images/lisp.png" alt="a simple registraion image" width="400" height="400"/>
-
                         </div>
                         {/*let's crate registration form  */}
                         <div>
